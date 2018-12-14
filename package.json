@@ -1,0 +1,30 @@
+{
+  "name": "leon-domingo--cv",
+  "version": "1.0.0",
+  "description": "CV de León Domingo",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:leondomingo/cv.git"
+  },
+  "author": "León Domingo <leon.domingo@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "eslint": "^5.10.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "newer": "^0.1.5",
+    "replace": "^1.0.0",
+    "stream-combiner2": "^1.1.1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "env": {
+        "production": {
+            "plugins": [
+                "transform-object-assign",
+                "transform-object-rest-spread",
+                "transform-remove-console"
+            ],
+            "sourceMaps": false,
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "browsers": ["last 2 versions", "ie >= 11"]
+                    }
+                }]
+            ]
+        },
+        "development": {
+            "plugins": [
+                "transform-object-assign",
+                "transform-object-rest-spread"
+            ],
+            "sourceMaps": false,
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "browsers": ["last 2 versions", "ie >= 11"]
+                    }
+                }]
+            ]
+        }
+    }
+}

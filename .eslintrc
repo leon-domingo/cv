@@ -1,0 +1,23 @@
+{
+    "globals": {
+        "XXXX": true
+    },
+    "extends": [
+        "/home/leon/.eslintrc",
+        "plugin:vue/recommended"
+    ],
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "ecmaFeatures": {
+        }
+    }
+}

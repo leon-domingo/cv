@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+$inner-width: 60em;
+$html-background: #eee;
+$body-background: #fff;
+
+html {
+  width: 100%;
+  background-color: $html-background;
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+
+    a {
+      outline: none;
+    }
+
+    #content {
+      width: 100%;
+      max-width: $inner-width;
+      margin: 2rem auto;
+      background-color: $body-background;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto;
+      height: calc(100vh - 2 * 2rem);
+
+      main {
+        padding: 1rem;
+        // background-color: orange;
+
+        .full-name {
+          display: inline-block;
+          margin: 0;
+          padding: .25rem;
+          background-color: #444;
+          color: #fff;
+          border-radius: .25rem;
+          box-shadow: 0 10px 6px -6px #777;
+        }
+
+        .job-title {
+          display: inline-block;
+          font-size: 1.2rem;
+          font-weight: normal;
+          margin: .25rem 0 0;
+          padding: .25rem;
+          background-color: #444;
+          color: #fff;
+          border-radius: .25rem;
+          box-shadow: 0 10px 6px -6px #777;
+        }
+
+        .intro {
+          p {
+            text-align: justify;
+            line-height: 1;
+          } // p
+        } // .intro
+
+        .section-title {
+          font-weight: 300;
+          padding: .25rem 0;
+          border-bottom: 1px solid #333;
+        } // .section-title
+
+        .item-prof-exp,
+        .item-educ {
+          padding: 1rem;
+          margin: .5rem 0;
+          border-radius: .5rem;
+          background-color: #ddd;
+          box-shadow: 0 10px 6px -6px #777;
+
+          .item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+          } // .item-title
+
+          .item-dates {
+            font-family: 'Open Sans', sans-serif;
+            font-size: .7rem;
+            color: #777;
+
+            span {
+              font-weight: bold;
+            } // span
+          } // .item-dates
+
+          .item-desc {
+            color: #444;
+            font-family: 'Open Sans', sans-serif;
+            font-size: .9rem;
+            line-height: 1;
+            text-align: justify;
+            margin: .5rem 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            } // &:last-child
+          } // .item-desc
+        } // .item-prof-exp
+      } // main
+
+      aside {
+        padding: 1rem;
+        background-color: #aaa;
+
+        .profile-wrapper {
+          text-align: center;
+          // background-color: #fff;
+
+          .profile {
+            display: inline-block;
+            width: 70%;
+            border-radius: 50%;
+          } // .profile
+        } // .profile-wrapper
+
+      }
+
+      // img {
+      //   display: block;
+      //   width: 100%;
+      // }
+
+    } // #content
+
+  } // body
+} // html
