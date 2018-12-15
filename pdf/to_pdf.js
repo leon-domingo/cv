@@ -24,7 +24,7 @@
   await page.pdf({
     path: flags.pdf,
     width: '1280px',
-    height: (height - 200) + 'px',
+    height: (height - 100) + 'px',
     printBackground: true,
   })
 
