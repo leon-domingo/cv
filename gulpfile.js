@@ -26,6 +26,7 @@ const PROJECT_TITLE = 'CV'
 const BASE_PATH = '.'
 const PATHS = [
   './index.html',
+  './en.html',
 ]
 
 // // JS (general)
