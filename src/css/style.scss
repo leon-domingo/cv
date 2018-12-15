@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
 
 $inner-width: 60em;
 $html-background: #eee;
@@ -23,12 +24,12 @@ html {
     #content {
       width: 100%;
       max-width: $inner-width;
-      margin: 2rem auto;
+      margin: 4rem auto 2rem;
       background-color: $body-background;
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-template-rows: auto;
-      height: calc(100vh - 2 * 2rem);
+      // height: calc(100vh - 2 * 2rem);
 
       main {
         padding: 1rem;
@@ -58,8 +59,10 @@ html {
 
         .intro {
           p {
+            font-size: .9rem;
             text-align: justify;
             line-height: 1;
+            margin: .75rem 0;
           } // p
         } // .intro
 
@@ -81,6 +84,12 @@ html {
             font-size: 1.2rem;
             font-weight: 600;
             color: #333;
+          } // .item-title
+
+          .item-subtitle {
+            font-size: .9rem;
+            font-weight: 400;
+            color: #555;
           } // .item-title
 
           .item-dates {
@@ -109,21 +118,89 @@ html {
       } // main
 
       aside {
-        padding: 1rem;
+        // padding: 1rem;
         background-color: #aaa;
 
+        .aside-inner {
+          padding: 0 1rem 1rem 1rem;
+        } // .aside-inner
+
         .profile-wrapper {
-          text-align: center;
+          background-image: url(../img/header-cv.png);
+          background-position: center;
+          background-size: 150%; //cover;
+          background-repeat: no-repeat;
+          height: 150px;
+          padding: 1rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           // background-color: #fff;
 
           .profile {
             display: inline-block;
-            width: 70%;
+            width: 50%;
             border-radius: 50%;
           } // .profile
         } // .profile-wrapper
 
-      }
+        .section-title {
+          font-weight: 300;
+          padding: .25rem 0;
+          border-bottom: 1px solid #333;
+        } // .section-title
+
+        .contact {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          li {
+            font-size: .9rem;
+            color: #333;
+
+            span {
+              display: inline-block;
+              width: 1rem;
+              margin-left: .5rem;
+              margin-right: 1rem;
+              text-align: center;
+              // background-color: #fff;
+            } // span
+
+            a {
+              color: #333;
+              text-decoration: none;
+            } // a
+          } // li
+        } // .contact
+
+        .skill {
+          display: inline-block;
+          background-color: #222;
+          color: #fff;
+          border-radius: .25rem 0;
+          padding: .5rem;
+          margin: 0 .25rem .45rem 0;
+
+          .title {
+            font-family: 'Roboto Mono', monospace;
+            font-size: .9rem;
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 1px solid #bbb;
+            // text-transform: uppercase;
+          } // .title
+
+          .level {
+            font-size: .8rem;
+            color: #bbb;
+            text-align: center;
+          } // .level
+        } // .skill
+
+      } // aside
 
       // img {
       //   display: block;

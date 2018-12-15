@@ -1,17 +1,5 @@
 'use strict'
 
-// const gulp         = require('gulp'),
-//       sass         = require('gulp-sass'),
-//       minifyCss    = require('gulp-cssnano'),
-//       newer        = require('gulp-newer'),
-//       autoprefixer = require('gulp-autoprefixer'),
-//       notify       = require('gulp-notify'),
-//       // uglify       = require('gulp-uglify'),
-//       rename       = require('gulp-rename'),
-//       combiner     = require('stream-combiner2'),
-//       replace      = require('replace'),
-//       del          = require('del')
-
 const gulp         = require('gulp'),
       sass         = require('gulp-sass'),
       minifyCss    = require('gulp-cssnano'),

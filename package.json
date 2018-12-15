@@ -11,6 +11,7 @@
   "author": "León Domingo <leon.domingo@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "args": "^5.0.0",
     "del": "^3.0.0",
     "eslint": "^5.10.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -24,6 +25,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "newer": "^0.1.5",
+    "puppeteer": "^1.11.0",
     "replace": "^1.0.0",
     "stream-combiner2": "^1.1.1"
   }
