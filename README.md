@@ -11,5 +11,4 @@ I'm also focused on **JS**-related technologies: **NodeJS**, **Vue.js**, **React
 
 Testing (and playing with) new technologies, as they come up, is something I like a lot. **Golang** or **Universal JS** apps with SSR are areas where I want to get better.
 
-I used to work on desktop apps environment () but now I know I'll never come back. The WWW is
-the future (and the present, in fact), and we have a lot of opportunities out there.
+I used to work on desktop apps environment (Windows) but now I know I'll never come back. The WWW is the future (and the present, in fact), and we have a lot of opportunities out there.
