@@ -204,9 +204,39 @@ html {
           } // .title
 
           .level {
-            font-size: .8rem;
+            font-size: .7rem;
             color: #bbb;
             text-align: center;
+            color: #000;
+            padding: .1rem .25rem;
+            margin-top: .25rem;
+            border-radius: 0 .25rem .25rem 0;
+
+            $level-color: #a0a0a0; // #00ff99; // #008aff;
+
+            &.adv {
+              background: linear-gradient(90deg, $level-color 97%, #fff 97%);
+            } // &.adv
+
+            &.adv-full {
+              background: $level-color 100%;
+            } // &.adv
+
+            &.prof {
+              background: linear-gradient(90deg, $level-color 70%, #fff 70%);
+            } // &.prof
+
+            &.prof-2 {
+              background: linear-gradient(90deg, $level-color 65%, #fff 65%);
+            } // &.prof-2
+
+            &.inter {
+              background: linear-gradient(90deg, $level-color 50%, #fff 50%);
+            } // &.inter
+
+            &.begin {
+              background: linear-gradient(90deg, $level-color 25%, #fff 25%);
+            } // &.begin
           } // .level
         } // .skill
 
