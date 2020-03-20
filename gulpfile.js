@@ -7,15 +7,6 @@ const gulp         = require('gulp'),
       sourcemaps   = require('gulp-sourcemaps'),
       rename       = require('gulp-rename'),
       newer        = require('gulp-newer'),
-      // gzip         = require('gulp-gzip'),
-      // combiner     = require('stream-combiner2'),
-      // watchify     = require('watchify'),
-      // browserify   = require('browserify'),
-      // babelify     = require('babelify'),
-      // vueify       = require('vueify'),
-      // aliasify     = require('aliasify'),
-      // vinylBuffer  = require('vinyl-buffer'),
-      // source       = require('vinyl-source-stream'),
       notify       = require('gulp-notify'),
       notifier     = require('node-notifier'),
       del          = require('del'),
@@ -28,43 +19,6 @@ const PATHS = [
   './index.html',
   './en/index.html',
 ]
-
-// // JS (general)
-// var DIST_JS = 'js'
-// gulp.task('js', function() {
-
-//   const version = Date.now()
-
-//   del([`${DIST_JS}/cv*.js`])
-
-//   replace({
-//     regex: /version=\d{13,}/g,
-//     replacement: `version=${version}`,
-//     paths: ['./index.html'],
-//     silent: true
-//   })
-
-//   replace({
-//     regex: /cv\.\d{13,}\.js/g,
-//     replacement: `cv.${version}.js`,
-//     paths: ['./index.html'],
-//     silent: true
-//   })
-
-//   const combined = combiner.obj([
-//     gulp.src(['./src/js/*.js']),
-//     uglify(),
-//     rename(`cv.${version}.js`),
-//     gulp.dest(DIST_JS)
-//   ])
-
-//   combined.on('error', notify.onError({
-//     title: PROJECT_TITLE,
-//     message: "<%= error.fileName %> (line=<%= error.lineNumber %>)"
-//   }))
-
-//   return combined
-// })
 
 
 // Sass (SCSS -> CSS -> CSS min)
@@ -135,7 +89,6 @@ gulp.task('css', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  // gulp.watch(['./src/js/*.js'], ['js'])
   gulp.watch(['./src/css/*.scss'], ['sass:dev'])
   gulp.watch(['./src/css/*.css'], ['css'])
 })
@@ -152,14 +105,12 @@ function showMessage(message) {
 
 // build
 gulp.task('build', [
-  // 'js',
   'sass:build',
   'css'
 ], () => showMessage('Build completed!'))
 
 // Default Task
 gulp.task('default', [
-  // 'js',
   'sass:dev',
   'css',
   'watch'
