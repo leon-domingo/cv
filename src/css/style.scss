@@ -130,6 +130,7 @@ html {
       }
 
       aside {
+        position: relative;
         text-align: right;
         background-color: #aaa;
 
@@ -241,6 +242,19 @@ html {
               background: linear-gradient(90deg, $levelColor 25%, #fff 25%);
             }
           }
+        }
+
+        .author {
+          display: inline-block;
+          position: absolute;
+          bottom: 1.5rem;
+          right: 1rem;
+          background-color: #222;
+          color: #fff;
+          border-radius: .25rem;
+          padding: .5rem;
+          font-size: .8rem;
+          text-decoration: none;
         }
       }
     }
