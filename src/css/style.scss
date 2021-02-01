@@ -206,6 +206,7 @@ html {
             text-align: center;
           }
 
+          $levelColor: #a0a0a0;
           .level {
             font-size: .7rem;
             color: #bbb;
@@ -215,8 +216,6 @@ html {
             margin-top: .25rem;
             border-radius: 0 .25rem .25rem 0;
             display: none;
-
-            $levelColor: #a0a0a0;
 
             &.adv {
               background: linear-gradient(90deg, $levelColor 97%, #fff 97%);

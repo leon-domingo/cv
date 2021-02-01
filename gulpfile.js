@@ -37,7 +37,7 @@ const sassVersion = (version) => {
   });
 };
 
-gulp.task('sass:dev', function() {
+function sassDev() {
   const version = Date.now();
   sassVersion(version);
 
@@ -50,9 +50,9 @@ gulp.task('sass:dev', function() {
     .pipe(rename(`style.${version}.css`))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(DIST_CSS));
-});
+}
 
-gulp.task('sass:build', function() {
+function sassBuild() {
   const version = Date.now();
   sassVersion(version);
 
@@ -65,9 +65,9 @@ gulp.task('sass:build', function() {
     .pipe(minifyCss({ zindex: false }))
     .pipe(rename(`style.${version}.css`))
     .pipe(gulp.dest(DIST_CSS));
-});
+}
 
-gulp.task('css', function() {
+function cssTask() {
   return gulp.src('./src/css/*.css')
     .pipe(newer(DIST_CSS))
     .pipe(autoprefixer())
@@ -76,16 +76,15 @@ gulp.task('css', function() {
       zindex: false,
     }))
     .pipe(gulp.dest(DIST_CSS));
-});
+}
 
-gulp.task('watch', function() {
-  gulp.watch(['./src/css/*.scss'], ['sass:dev']);
-  gulp.watch(['./src/css/*.css'], ['css']);
-});
+function watchTask() {
+  gulp.watch(['./src/css/*.scss'], sassDev);
+  gulp.watch(['./src/css/*.css'], cssTask);
+}
 
 function showMessage(message) {
   const icon = path.join(__dirname, `${BASE_PATH}/img/cv-icon.png`);
-
   notifier.notify({
     title: PROJECT_TITLE,
     message,
@@ -93,13 +92,27 @@ function showMessage(message) {
   });
 }
 
-gulp.task('build', [
-  'sass:build',
-  'css',
-], () => showMessage('Build completed!'));
+gulp.task('build',
+  gulp.series(
+    gulp.parallel(
+      sassBuild,
+      cssTask,
+    ),
+    function messageBuild(done) {
+      showMessage('Build completed!');
+      done();
+    },
+  ),
+);
 
-gulp.task('default', [
-  'sass:dev',
-  'css',
-  'watch',
-], () => showMessage('gulp running!'));
+gulp.task('default',
+  gulp.parallel(
+    sassDev,
+    cssTask,
+    watchTask,
+    function messageDefault(done) {
+      showMessage('gulp running!');
+      done();
+    },
+  ),
+);
