@@ -1,7 +1,7 @@
 # León Domingo
 ## Fullstack webdeveloper
 
-Full-stack web developer and enthusiast of **the WWW** universe for its freedom of movement.
+Web developer and enthusiast of **the WWW** universe for its freedom of movement.
 
 I'm in love with **open-source projects** which give us a great support to create useful things with a low cost. (Almost) every tool I use is open source (Linux, Python, PostgreSQL, VSCode, etc, etc) and I (usually) do not like propietary solutions (oracle, sql server, windows, etc) because of the obligation to adopt another set of private related technologies from the same company (most of the time).
 
