@@ -24,7 +24,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "newer": "^0.1.5",
-    "puppeteer": "^10.0.0",
+    "puppeteer": "^10.1.0",
     "replace": "^1.2.1",
     "stream-combiner2": "^1.1.1"
   },
