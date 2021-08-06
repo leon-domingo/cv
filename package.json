@@ -13,7 +13,7 @@
   "devDependencies": {
     "args": "^5.0.1",
     "del": "^6.0.0",
-    "eslint": "^7.29.0",
+    "eslint": "^7.32.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssnano": "^2.1.3",
@@ -24,7 +24,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "newer": "^0.1.5",
-    "puppeteer": "^10.1.0",
+    "puppeteer": "^10.2.0",
     "replace": "^1.2.1",
     "stream-combiner2": "^1.1.1"
   },

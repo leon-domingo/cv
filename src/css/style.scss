@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
 
-$innerWidth: 60em;
+$innerWidth: 75em;
 $htmlBackground: #eee;
 $bodyBackground: #fff;
 
@@ -31,7 +31,7 @@ html {
       margin: 4rem auto 2rem;
       background-color: $bodyBackground;
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 3fr 1fr;
       grid-template-rows: auto;
 
       main {
@@ -64,7 +64,7 @@ html {
 
         .intro {
           p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 300;
             text-align: justify;
             line-height: 1;
@@ -76,18 +76,22 @@ html {
           font-weight: 300;
           padding: .25rem 0;
           border-bottom: 1px solid #333;
+
+          &.professional-experience {
+            padding: .40rem 0 .25rem;
+          }
         }
 
         .item-prof-exp,
         .item-educ {
           @include shadowBelow();
           padding: 1rem;
-          margin: .5rem 0;
+          margin: 1rem 0 0;
           border-radius: .5rem;
           background-color: #ddd;
 
           .item-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: #333;
 
@@ -99,14 +103,14 @@ html {
           }
 
           .item-subtitle {
-            font-size: .9rem;
+            font-size: 1rem;
             font-weight: 400;
             color: #555;
           }
 
           .item-dates {
             font-family: 'Open Sans', sans-serif;
-            font-size: .7rem;
+            font-size: .9rem;
             color: #777;
 
             span {
@@ -117,7 +121,7 @@ html {
           .item-desc {
             color: #444;
             font-family: 'Open Sans', sans-serif;
-            font-size: .9rem;
+            font-size: 1rem;
             line-height: 1;
             text-align: justify;
             margin: .5rem 0;
@@ -169,7 +173,7 @@ html {
           list-style: none;
 
           li {
-            font-size: .9rem;
+            font-size: 1rem;
             color: #333;
 
             span {
