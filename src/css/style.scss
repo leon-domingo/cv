@@ -5,6 +5,12 @@
 $innerWidth: 75em;
 $htmlBackground: #eee;
 $bodyBackground: #fff;
+$itemBackgroundColor: #34495e;
+$asideBackgroundColor: #6C7E8F;
+$contactLinkColor: #fff;
+$contactIconColor: #10253A;
+$skillBackgroundColor: #fff;
+$skillColor: $itemBackgroundColor;
 
 @mixin shadowBelow {
   box-shadow: 0 10px 6px -6px #777;
@@ -38,28 +44,28 @@ html {
         padding: 1rem;
 
         .full-name {
+          // @include shadowBelow();
           display: inline-block;
           font-weight: 300;
           margin: 0;
-          padding: .25rem 2rem;
+          padding: .25rem 1rem;
           width: 100%;
-          background-color: #444;
+          background-color: $itemBackgroundColor;
           color: #fff;
           border-radius: .15rem;
-          box-shadow: 0 10px 6px -6px #777;
           box-sizing: border-box;
         }
 
         .job-title {
+          // @include shadowBelow();
           display: inline-block;
-          font-size: 1.2rem;
-          font-weight: normal;
+          font-size: 1rem;
+          font-weight: 300;
           margin: .25rem 0 0;
-          padding: .25rem 2rem;
-          background-color: #ddd;
-          color: #333;
+          padding: .25rem 1rem;
+          background-color: #6C7E8F;
+          color: #fff;
           border-radius: .15rem;
-          box-shadow: 0 10px 6px -6px #777;
         }
 
         .intro {
@@ -74,44 +80,54 @@ html {
 
         .section-title {
           font-weight: 300;
-          padding: .25rem 0;
-          border-bottom: 1px solid #333;
+          padding: .25rem 1rem;
+          background-color: #20374D;
+          color: #eee;
+          border-radius: .25rem;
 
           &.professional-experience {
-            padding: .40rem 0 .25rem;
+            margin-top: 1.7rem;
           }
         }
 
         .item-prof-exp,
         .item-educ {
-          @include shadowBelow();
-          padding: 1rem;
+          // @include shadowBelow();
+          position: relative;
+          padding: .5rem 1rem;
           margin: 1rem 0 0;
           border-radius: .5rem;
           background-color: #ddd;
 
           .item-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #333;
 
             .freelance {
               font-size: .9rem;
               font-weight: 400;
-              color: #666;
+              color: #333;
             }
           }
 
           .item-subtitle {
-            font-size: 1rem;
+            font-size: .9rem;
             font-weight: 400;
             color: #555;
           }
 
           .item-dates {
+            position: absolute;
+            display: inline-block;
+            right: 1rem;
+            top: .5rem;
+            padding: 0 .5rem;
             font-family: 'Open Sans', sans-serif;
             font-size: .9rem;
-            color: #777;
+            background-color: $itemBackgroundColor;
+            color: #fff;
+            border-radius: .25rem;
 
             span {
               font-weight: bold;
@@ -121,9 +137,8 @@ html {
           .item-desc {
             color: #444;
             font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
+            font-size: .8rem;
             line-height: 1;
-            text-align: justify;
             margin: .5rem 0;
 
             &:last-child {
@@ -136,7 +151,7 @@ html {
       aside {
         position: relative;
         text-align: right;
-        background-color: #aaa;
+        background-color: $asideBackgroundColor;
 
         .aside-inner {
           padding: 0 1rem 1rem 1rem;
@@ -163,8 +178,10 @@ html {
 
         .section-title {
           font-weight: 300;
-          padding: .25rem 0;
-          border-bottom: 1px solid #333;
+          padding: .25rem .5rem;
+          background-color: #20374D;
+          color: #eee;
+          border-radius: .25rem;
         }
 
         .contact {
@@ -174,7 +191,7 @@ html {
 
           li {
             font-size: 1rem;
-            color: #333;
+            color: #eee; // #333;
 
             span {
               display: inline-block;
@@ -184,65 +201,71 @@ html {
             }
 
             a {
-              color: #333;
+              color: $contactLinkColor;
               text-decoration: none;
 
               &.underline {
                 text-decoration: underline;
               }
             }
+
+            i {
+              color: $contactIconColor;
+            }
           }
         }
 
-        .skill {
-          @include shadowBelow();
-          display: inline-block;
-          background-color: #222;
-          color: #fff;
-          border-radius: .25rem;
-          padding: .5rem;
-          margin: 0 0 .45rem .25rem;
+        .section-skills {
+          .skill {
+            // @include shadowBelow();
+            display: inline-block;
+            background-color: $skillBackgroundColor;
+            color: $skillColor;
+            border-radius: .25rem;
+            padding: .5rem;
+            margin: 0 0 .45rem .25rem;
 
-          .title {
-            font-family: 'Roboto Mono', monospace;
-            font-size: .9rem;
-            font-weight: 400;
-            text-align: center;
-          }
-
-          $levelColor: #a0a0a0;
-          .level {
-            font-size: .7rem;
-            color: #bbb;
-            text-align: center;
-            color: #000;
-            padding: .1rem .25rem;
-            margin-top: .25rem;
-            border-radius: 0 .25rem .25rem 0;
-            display: none;
-
-            &.adv {
-              background: linear-gradient(90deg, $levelColor 97%, #fff 97%);
+            .title {
+              font-family: 'Roboto Mono', monospace;
+              font-size: .9rem;
+              font-weight: 500;
+              text-align: center;
             }
 
-            &.adv-full {
-              background: $levelColor 100%;
-            }
+            $levelColor: #a0a0a0;
+            .level {
+              font-size: .7rem;
+              color: #bbb;
+              text-align: center;
+              color: #000;
+              padding: .1rem .25rem;
+              margin-top: .25rem;
+              border-radius: 0 .25rem .25rem 0;
+              display: none;
 
-            &.prof {
-              background: linear-gradient(90deg, $levelColor 70%, #fff 70%);
-            }
+              &.adv {
+                background: linear-gradient(90deg, $levelColor 97%, #fff 97%);
+              }
 
-            &.prof-2 {
-              background: linear-gradient(90deg, $levelColor 65%, #fff 65%);
-            }
+              &.adv-full {
+                background: $levelColor 100%;
+              }
 
-            &.inter {
-              background: linear-gradient(90deg, $levelColor 50%, #fff 50%);
-            }
+              &.prof {
+                background: linear-gradient(90deg, $levelColor 70%, #fff 70%);
+              }
 
-            &.begin {
-              background: linear-gradient(90deg, $levelColor 25%, #fff 25%);
+              &.prof-2 {
+                background: linear-gradient(90deg, $levelColor 65%, #fff 65%);
+              }
+
+              &.inter {
+                background: linear-gradient(90deg, $levelColor 50%, #fff 50%);
+              }
+
+              &.begin {
+                background: linear-gradient(90deg, $levelColor 25%, #fff 25%);
+              }
             }
           }
         }
@@ -252,7 +275,7 @@ html {
           position: absolute;
           bottom: 1.5rem;
           right: 1rem;
-          background-color: #222;
+          background-color: $itemBackgroundColor;
           color: #fff;
           border-radius: .25rem;
           padding: .5rem;
