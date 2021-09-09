@@ -84,20 +84,19 @@ html {
           color: #eee;
           border-radius: .25rem;
 
-          &.professional-experience {
+          &__professional-experience {
             margin-top: 1.7rem;
           }
         }
 
-        .item-prof-exp,
-        .item-educ {
+        .professional-experience {
           position: relative;
           padding: .5rem 1rem;
-          margin: 1rem 0 0;
+          margin: .5rem 0 0;
           border-radius: .5rem;
           background-color: #ddd;
 
-          .item-title {
+          &__title {
             font-size: 1.1rem;
             font-weight: 600;
             color: #333;
@@ -109,13 +108,13 @@ html {
             }
           }
 
-          .item-subtitle {
+          &__subtitle {
             font-size: .9rem;
             font-weight: 400;
             color: #555;
           }
 
-          .item-dates {
+          &__dates {
             position: absolute;
             display: inline-block;
             right: 1rem;
@@ -132,7 +131,85 @@ html {
             }
           }
 
-          .item-desc {
+          &__short-description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            line-height: .9;
+            color: #444;
+            margin: .25rem 0;
+            background-color: #eee;
+            padding: .25rem;
+          }
+
+          &__description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: .8rem;
+            line-height: 1;
+            margin: .5rem 0;
+            color: #444;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          &__items {
+            margin: .5rem 1rem;
+            padding: 0;
+
+            li {
+              font-family: 'Open Sans', sans-serif;
+              font-size: .9rem;
+              line-height: 1;
+              margin-bottom: 2px;
+              color: #444;
+            }
+          }
+        }
+
+        .education {
+          position: relative;
+          padding: .5rem 1rem;
+          margin: 1rem 0 0;
+          border-radius: .5rem;
+          background-color: #ddd;
+
+          &__title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+
+            .freelance {
+              font-size: .9rem;
+              font-weight: 400;
+              color: #333;
+            }
+          }
+
+          &__subtitle {
+            font-size: .9rem;
+            font-weight: 400;
+            color: #555;
+          }
+
+          &__dates {
+            position: absolute;
+            display: inline-block;
+            right: 1rem;
+            top: .5rem;
+            padding: 0 .5rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: .9rem;
+            background-color: $primaryBackgroundColor;
+            color: #fff;
+            border-radius: .25rem;
+
+            span {
+              font-weight: bold;
+            }
+          }
+
+          &__description {
             color: #444;
             font-family: 'Open Sans', sans-serif;
             font-size: .8rem;
@@ -187,7 +264,7 @@ html {
           padding: 0;
           list-style: none;
 
-          li {
+          &__item {
             font-size: 1rem;
             color: #eee;
             padding-right: .25rem;
@@ -224,7 +301,7 @@ html {
             padding: .5rem;
             margin: 0 0 .45rem .25rem;
 
-            .title {
+            &__title {
               font-family: 'Roboto Mono', monospace;
               font-size: .9rem;
               font-weight: 500;
@@ -232,7 +309,7 @@ html {
             }
 
             $levelColor: #a0a0a0;
-            .level {
+            &__level {
               font-size: .7rem;
               color: #bbb;
               text-align: center;
