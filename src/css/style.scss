@@ -101,7 +101,7 @@ html {
             font-weight: 600;
             color: #333;
 
-            .freelance {
+            .employment-type {
               font-size: .9rem;
               font-weight: 400;
               color: #333;
@@ -178,12 +178,6 @@ html {
             font-size: 1.1rem;
             font-weight: 600;
             color: #333;
-
-            .freelance {
-              font-size: .9rem;
-              font-weight: 400;
-              color: #333;
-            }
           }
 
           &__subtitle {
@@ -306,42 +300,6 @@ html {
               font-size: .9rem;
               font-weight: 500;
               text-align: center;
-            }
-
-            $levelColor: #a0a0a0;
-            &__level {
-              font-size: .7rem;
-              color: #bbb;
-              text-align: center;
-              color: #000;
-              padding: .1rem .25rem;
-              margin-top: .25rem;
-              border-radius: 0 .25rem .25rem 0;
-              display: none;
-
-              &.adv {
-                background: linear-gradient(90deg, $levelColor 97%, #fff 97%);
-              }
-
-              &.adv-full {
-                background: $levelColor 100%;
-              }
-
-              &.prof {
-                background: linear-gradient(90deg, $levelColor 70%, #fff 70%);
-              }
-
-              &.prof-2 {
-                background: linear-gradient(90deg, $levelColor 65%, #fff 65%);
-              }
-
-              &.inter {
-                background: linear-gradient(90deg, $levelColor 50%, #fff 50%);
-              }
-
-              &.begin {
-                background: linear-gradient(90deg, $levelColor 25%, #fff 25%);
-              }
             }
           }
         }
