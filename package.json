@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "CV de León Domingo",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "npx gulp",
+    "build:pdf": "./generate-pdf.sh",
+    "build": "npx gulp build && npm run build:pdf"
+  },
   "repository": {
     "type": "git",
     "url": "git@bitbucket.org:leondomingo/cv.git"
