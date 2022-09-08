@@ -15,9 +15,9 @@
   "author": "León Domingo <leon.domingo@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "args": "^5.0.1",
+    "args": "^5.0.3",
     "del": "^6.0.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.23.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssnano": "^2.1.3",
