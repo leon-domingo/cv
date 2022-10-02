@@ -9,4 +9,4 @@ I'm pretty focused on **JavaScript**-related technologies (including **Typescrip
 
 I love **Python** and the whole living ecosystem around it. Great work of a lot of people. Great on-line resources and awesome productivity.
 
-Testing (and playing with) new technologies, as they come up, is something I like a lot. **Golang** or **Blockchain** are areas where I want to get better in the mid term.
+Testing (and playing with) new technologies, as they come up, is something I like a lot.
